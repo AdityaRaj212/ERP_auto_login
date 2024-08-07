@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "ERP Auto Login",
+    "version": "1.0",
+    "description": "Automate the login process for ERP site.",
+    "permissions": [
+      "activeTab",
+      "storage",
+      "scripting"
+    ],
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://erp.iitkgp.ac.in/*"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
